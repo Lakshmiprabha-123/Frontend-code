@@ -1,0 +1,123 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.title {
+  color: blue;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+label {
+  font-size: 20px;
+  text-align: left;
+  color: blue;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between label and input */
+}
+
+.form-container {
+  width: 1000px; /* Adjust width as needed */
+  padding: 20px; /* Adjust padding as needed */
+  border: 30px solid lightskyblue;
+  border-radius: 20px;
+  background-image: url('/assets/backgroundimg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.team-composition-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.team-composition-left, .team-composition-right {
+  flex: 1;
+}
+
+.team-composition-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.team-composition-item label {
+  width: 200px; /* Fixed width for labels */
+  margin-right: 15px; /* Space between label and input */
+  font-weight: bold;
+}
+
+/* Input styling */
+
+
+.small-input {
+  margin-left: 10px;
+  width: 100px;
+}
+.smal-input {
+  margin-left: 10px;
+  width: 325px;
+}
+
+.two-column-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  background-image: url('/assets/background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex; /* Center content horizontally and vertically */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+}
+
+.success-message {
+  font-weight: bold;       /* Makes the text bold */
+  color: green;            /* Sets the text color to green */
+  font-size: 1.2em;        /* Optional: makes the text slightly larger */
+  margin-top: 20px;        /* Adds some space above the message */
+}

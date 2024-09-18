@@ -1,0 +1,35 @@
+<!-- Specific component template -->
+<div [ngStyle]="{'background-color': 'silver',height:200}">
+ 
+<div class="dashboard-container">
+  <div class="chart-container">
+    <h2 class="pro">Project & Current Status</h2>
+    <app-project-status-chart></app-project-status-chart>
+  </div>
+  
+  <div class="chart-container">
+    <h2 class="pro">Team Composition</h2>
+    <app-team-composition-chart></app-team-composition-chart>
+  </div>
+  
+  <div class="chart-container">
+    <h2 class="pro">Monthly Status</h2>
+    <app-monthly-status></app-monthly-status>
+  </div>
+
+  <div class="chart-container">
+    <h2 class="pro">Yearly status</h2>
+    <app-status-line-chart></app-status-line-chart>
+  </div>
+
+  <div class="chart-container">
+    <h2 class="pro">Weekly status</h2>
+   <app-weekly-status></app-weekly-status>
+  </div>
+
+  <div class="chart-container">
+    <h2 class="pro">Number of defects</h2>
+   <app-weekly-defects-line-chart></app-weekly-defects-line-chart>
+  </div>
+</div>
+</div> 

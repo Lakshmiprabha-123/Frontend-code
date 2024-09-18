@@ -1,0 +1,60 @@
+.form-container {
+    width: 900px;
+    height:980px;
+    padding: 20px;
+    border: 30px solid lightskyblue;
+    background-color: #e0f7fa;
+    border-radius: 20px;
+    background-color: whitesmoke; /* Fallback color in case background image is not loaded */
+    background-image: url('/assets/backgroundimg.jpg'); /* Path to your form-specific background image */
+    background-size: cover; /* Ensure the image covers the form container */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-position: center; /* Center the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .title {
+    color: blue; 
+    font-size: 30px;
+    
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 20px;
+    width: 40%;
+    text-align: left;
+    padding-right: 10px;
+    color: blue; /* Set the text color to blue */
+  font-weight: bold; /* Make the text bold */
+  }
+  
+  input, select {
+    width: 55%;
+  }
+  
+  button {
+    background-color: blue;
+    display: block;
+    margin: 0 auto;
+  }
+  :host {
+    display: block;
+    background-image: url('/assets/your-backgroundimg.jpg');
+    /* background-color: rgba(171, 221, 238, 0.8); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure it covers the full viewport height */
+    padding: 10px;
+  }

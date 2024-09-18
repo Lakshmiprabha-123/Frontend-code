@@ -1,0 +1,53 @@
+:host {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensure it covers the full viewport height */
+  padding: 10px;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default 2 columns */
+  grid-template-rows: repeat(3, auto); /* 3 rows with auto height */
+  gap: 10px; /* Space between the components */
+  height: 100%;
+}
+
+.chart-container {
+  padding: 20px;
+  border-radius: 10px; /* Optional: to make the containers look better */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for a slight shadow effect */
+  background-color: white;
+  flex-basis: 48%; /* Adjusts the width for larger screens */
+  min-width: 300px; /* Minimum width to prevent overflowing on small screens */
+  box-sizing: border-box;
+  flex:  1 800px;
+}
+
+
+.pro {
+  color: darkmagenta;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .dashboard-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(4, auto); /* Adjust rows to fit content */
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: repeat(6, auto); /* Adjust rows to fit content */
+  }
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+    padding: 10px; /* Reduce padding on small screens */
+  }
+}

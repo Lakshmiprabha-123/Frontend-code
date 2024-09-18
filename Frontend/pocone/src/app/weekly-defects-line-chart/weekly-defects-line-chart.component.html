@@ -1,0 +1,36 @@
+<div class="dashboard-container">
+  <div class="chart-container">
+    <div class="select-container">
+    <div>
+    
+      <label for="project">Select Project:</label>
+      <select id="project" [(ngModel)]="selectedProjectId" (change)="fetchWeeklyDefects()">
+        <option *ngFor="let project of projects" [value]="project.id">{{ project.name }}</option>
+      </select>
+    <br>
+    
+      <label for="year">Select Year:</label>
+      <select id="year" [(ngModel)]="selectedYear" (change)="fetchWeeklyDefects()">
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+    <br>
+  
+      <label for="month">Select Month:</label>
+      <select id="month" [(ngModel)]="selectedMonth" (change)="fetchWeeklyDefects()">
+        <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
+      </select>
+    <br>
+    </div>
+    </div>
+    <div style="display: block;">
+    <canvas baseChart
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [legend]="true"
+      [chartType]="lineChartType">
+    </canvas>
+  </div>
+  </div>
+  </div>
+  

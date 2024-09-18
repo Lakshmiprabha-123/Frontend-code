@@ -1,0 +1,133 @@
+<div class="container mt-4">
+      <h2 class="text-center title">Status Form</h2>
+      <div class="form-container">
+          <form (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                  <label for="teamComposition">Team Composition</label>
+                  <div class="team-composition-container">
+                      <div class="team-composition-left">
+                          <div *ngFor="let label of teamCompositionLabels.slice(0, 5)" class="team-composition-item">
+                              <label>{{ label }}</label>
+                              <input type="number" [value]="status.teamComposition[label] || 0" 
+                                     (input)="onTeamCompositionChange(label, $event)" class="small-input">
+                          </div>
+                      </div>
+                      <div class="team-composition-right">
+                          <div *ngFor="let label of teamCompositionLabels.slice(5, 10)" class="team-composition-item">
+                              <label>{{ label }}</label>
+                              <input type="number" [value]="status.teamComposition[label] || 0" 
+                                     (input)="onTeamCompositionChange(label, $event)" class="small-input">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                  <div class="two-column-container">
+                      <!-- Left Column -->
+                      <div class="column">
+                          <div class="form-group">
+                              <label for="risksInDelivery">Risk in Delivery</label>
+                              <div class="radio-group">
+                                  <input type="radio" id="risksInDeliveryYes" name="risksInDelivery" [(ngModel)]="status.risksInDelivery" [value]="true">
+                                  <label for="risksInDeliveryYes">Yes</label>
+                                  <input type="radio" id="risksInDeliveryNo" name="risksInDelivery" [(ngModel)]="status.risksInDelivery" [value]="false">
+                                  <label for="risksInDeliveryNo">No</label>
+                              </div>
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="processFlows">Process Flows</label>
+                              <select id="processFlows" [(ngModel)]="status.processFlows" name="processFlows" required class="smal-input">
+                                  <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+                              </select>
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="numberOfDefects">Number of Defects</label>
+                              <input id="numberOfDefects" type="number" [(ngModel)]="status.numberOfDefects" name="numberOfDefects" class="smal-input">
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="dailyUpdates">Daily Updates</label>
+                              <select id="dailyUpdates" [(ngModel)]="status.dailyUpdates" name="dailyUpdates" required class="smal-input">
+                                  <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+                              </select>
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="qaUpdates">QA Updates</label>
+                              <select id="qaUpdates" [(ngModel)]="status.qaUpdates" name="qaUpdates" required class="smal-input">
+                                  <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+                              </select>
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="sonarqube">Sonarqube</label>
+                              <select id="sonarqube" [(ngModel)]="status.sonarqube" name="sonarqube" required class="smal-input">
+                                  <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+                              </select>
+                          </div>
+                      </div>
+  
+                      <!-- Right Column -->
+                      <div class="column">
+                          <div class="form-group">
+                              <label for="defectsReport">Defects Report</label>
+                              <div class="radio-group">
+                                  <input type="radio" id="defectsReportYes" name="defectsReport" [(ngModel)]="status.defectsReport" [value]="true">
+                                  <label for="defectsReportYes">Yes</label>
+                                  <input type="radio" id="defectsReportNo" name="defectsReport" [(ngModel)]="status.defectsReport" [value]="false">
+                                  <label for="defectsReportNo">No</label>
+                              </div>
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="weeklyReports">Weekly Reports</label>
+                              <select id="weeklyReports" [(ngModel)]="status.weeklyReports" name="weeklyReports" required class="smal-input">
+                                  <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+                              </select>
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="closeClientCommunication">Close Client Communication</label>
+                              <select id="closeClientCommunication" [(ngModel)]="status.closeClientCommunication" name="closeClientCommunication" required class="smal-input">
+                                  <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+                              </select>
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="gitReport">Git Report</label>
+                              <select id="gitReport" [(ngModel)]="status.gitReport" name="gitReport" required class="smal-input">
+                                  <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+                              </select>
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="escalation">Escalation</label>
+                              <select id="escalation" [(ngModel)]="status.escalation" name="escalation" required class="smal-input">
+                                  <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+                              </select>
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="boardUpdates">Board Updates</label>
+                              <select id="boardUpdates" [(ngModel)]="status.boardUpdates" name="boardUpdates" required class="smal-input">
+                                  <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div *ngIf="showSuccessMessage" class="text-center mx-auto success-message">
+                {{ successMessage }}
+              </div>
+              <button type="submit">{{ isUpdateMode ? 'Update Status' : 'Add Status' }}</button>
+              <br>
+              
+              <button type="button" class="btn btn-secondary" (click)="goBack()">Back</button>
+          </form>
+          
+      </div>
+  </div>
+  

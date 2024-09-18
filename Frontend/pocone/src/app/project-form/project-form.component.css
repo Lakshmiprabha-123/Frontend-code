@@ -1,0 +1,85 @@
+body {
+  background-image: url('/assets/background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex; /* Center content horizontally and vertically */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.form-container {
+  width: 1000px; /* Adjust width as needed */
+  padding: 20px; /* Adjust padding as needed */
+  border: 30px solid lightskyblue;
+  border-radius: 20px;
+  background-image: url('/assets/backgroundimg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.form-group {
+  width: 48%; /* Adjust to control the space between columns */
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 20px;
+  text-align: left;
+  color: blue;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between label and input */
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Space below input */
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.success-message {
+  font-weight: bold;       /* Makes the text bold */
+  color: green;            /* Sets the text color to green */
+  font-size: 1.2em;        /* Optional: makes the text slightly larger */
+  margin-top: 20px;        /* Adds some space above the message */
+}
+

@@ -1,0 +1,55 @@
+<div class="dashboard-container">
+  <div class="chart-container"  style="display: flex; align-items: flex-start;">
+    <div class="chart-box" style="display: block;">
+    <div class="select-container">
+    <div>
+    <label for="projectSelect">Select Project:</label>
+    <select id="projectSelect" [(ngModel)]="selectedProjectId" (change)="fetchWeeklyStatus()">
+      <option *ngFor="let project of projects" [value]="project.id">{{ project.name }}</option>
+    </select><br><br>
+  
+    <label for="yearSelect">Select Year:</label>
+    <select id="yearSelect" [(ngModel)]="selectedYear" (change)="fetchWeeklyStatus()">
+      <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+    </select><br><br>
+  
+    <label for="monthSelect">Select Month:</label>
+    <select id="monthSelect" [(ngModel)]="selectedMonth" (change)="fetchWeeklyStatus()">
+      <option *ngFor="let month of months" [value]="month.value">{{ month.name }}</option>
+    </select><br><br>
+    </div>
+    </div>
+    
+    
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+    </canvas>
+  </div>
+  <div class="legend-box">
+    <ul>
+      <li>
+        <span class="legend-color" style="background-color: rgb(129, 219, 129);"></span>On Track
+      </li>
+      <li>
+        <span class="legend-color" style="background-color: #FFCE56;"></span>Slow
+      </li>
+      <li>
+        <span class="legend-color" style="background-color: #FF9F40;"></span>Risk
+      </li>
+      <li>
+        <span class="legend-color" style="background-color: rgb(240, 107, 107);"></span>Deep Risk
+      </li>
+      <li>
+        <span class="legend-color" style="background-color: grey;"></span>Not Yet Started
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  
+  
+

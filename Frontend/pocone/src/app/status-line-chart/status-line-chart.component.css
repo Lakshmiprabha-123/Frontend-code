@@ -1,0 +1,35 @@
+.dashboard-container {
+    padding: 20px;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .dropdown-container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Align items vertically in the center */
+  }
+  
+  .dropdown-item {
+    display: flex; /* Display label and select inline */
+    align-items: center; /* Vertically center the label and select */
+    margin-right: 20px; /* Space between dropdowns */
+  }
+  
+  .dropdown-item label {
+    margin-right: 5px; /* Space between label and select */
+  }
+  
+  .dropdown-item select {
+    padding: 5px; /* Adjust padding for the dropdown */
+  }
+  

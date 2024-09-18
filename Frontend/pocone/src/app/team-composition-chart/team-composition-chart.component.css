@@ -1,0 +1,54 @@
+.dashboard-container {
+    display: flex;
+    gap: 20px; /* Space between the components */
+  }
+  
+  .chart-container {
+    flex: 1; /* Allow components to grow equally */
+  }
+
+  
+  .chart-container .legend-box {
+    border: 1px solid #ccc;  /* Border around the legend box */
+    padding: 10px;           /* Space inside the legend box */
+    background-color: #f9f9f9; /* Optional: light background color */
+    margin-right: 20px;       /* Space between chart and legend */
+    display: inline-block;    /* Ensures it's aligned with the chart */
+             /* Moves the box to the right */
+  }
+  /* Target the legend container in Chart.js */
+.chart-legend {
+  display: flex;
+  flex-direction: column; /* Arrange legends vertically */
+  align-items: flex-start; /* Align items to the start of the container */
+  padding: 10px;
+  border: 1px solid #ddd; /* Border around the legend box */
+  background-color: #f9f9f9; /* Background color of the legend box */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Style individual legend items */
+.chart-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chart-legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Space between legend items */
+}
+
+.chart-legend li:last-child {
+  margin-bottom: 0; /* Remove bottom margin from the last item */
+}
+
+.chart-legend .legend-color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 3px; /* Rounded corners for color box */
+}
+
+  

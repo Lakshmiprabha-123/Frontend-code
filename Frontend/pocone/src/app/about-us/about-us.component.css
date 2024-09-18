@@ -1,0 +1,92 @@
+/* Container to hold the sections */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the container */
+  gap: 20px; /* Space between the sections */
+}
+
+/* Welcome Section styling */
+.welcome-section {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Space between image and text */
+}
+
+.welcome-image {
+  width: 500px;
+  height:500px; /* Adjust the size as needed */
+  height: auto;
+  border-radius: 8px;
+}
+
+.welcome-text {
+  text-align: left;
+}
+
+/* Left content styling */
+.left-content {
+  width: 100%; /* Full width to take up the available space */
+}
+
+/* Right content styling */
+.right-content {
+  width: 100%; /* Full width to take up the available space */
+}
+
+/* Projects Section styling */
+.projects-section {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Space between content and image */
+  justify-content: space-between;
+}
+
+/* Center text and style for the section */
+section {
+  padding: 80px;
+  max-width: 800px;
+  text-align: left; /* Left-align text inside the section */
+}
+
+section h2 {
+  font-size: 2em;
+  color: #444;
+  margin-bottom: 20px; /* Space between heading and content */
+}
+
+section ul {
+  list-style-type: circle;
+  padding-left: 20px;
+  margin: 0 auto; /* Center the list */
+}
+
+.projects-image {
+  width: 500px;
+  height:500px; /* Adjust the size as needed */
+  height:auto;
+  border-radius: 20px;
+}
+
+/* General Styles */
+h1 {
+  font-size: 2.5em;
+  color: rebeccapurple;
+}
+
+p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+ul {
+  list-style-type: disc;
+  padding: 0;
+}
+
+li {
+  font-size: 1.2em;
+  color: #666;
+  margin: 5px 0;
+}
+

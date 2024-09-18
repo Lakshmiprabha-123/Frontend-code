@@ -1,0 +1,120 @@
+
+   <div class="container mt-4">
+    <h2 class="text-center title">Project Form</h2>
+    <div class="form-container">
+      <form (ngSubmit)="onSubmit()" class="form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" >Project Name</label>
+            <input id="name" [(ngModel)]="project.name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="lead">Project Lead</label>
+            <input id="lead" [(ngModel)]="project.lead" name="lead" required>
+          </div>
+        </div><br>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label for="techStack">Tech Stack</label>
+            <input id="techStack" [(ngModel)]="project.techStack" name="techStack" required>
+          </div>
+          <div class="form-group">
+            <label for="projectStatus">Status</label>
+            <input id="projectStatus" [(ngModel)]="project.projectStatus" name="projectStatus" required>
+          </div>
+        </div><br>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label for="startdate">Start Date</label>
+            <input id="startdate" type="date" [(ngModel)]="project.startdate" name="startdate" required>
+          </div>
+          <div class="form-group">
+            <label for="deadline">Deadline</label>
+            <input id="deadline" type="date" [(ngModel)]="project.deadline" name="deadline" required>
+          </div>
+        </div><br>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label for="totalPeopleAllocated">Total People Allocated</label>
+            <input id="totalPeopleAllocated" type="number" [(ngModel)]="project.totalPeopleAllocated" name="totalPeopleAllocated" required>
+          </div>
+          <div class="form-group">
+            <label for="actualAllocationSOW">Actual Allocation SOW</label>
+            <input id="actualAllocationSOW" type="number" [(ngModel)]="project.actualAllocationSOW" name="actualAllocationSOW" required>
+          </div>
+        </div><br>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label for="adrItemDocumentation">ADR Item Documentation</label>
+            <select id="adrItemDocumentation" [(ngModel)]="project.adrItemDocumentation" name="adrItemDocumentation" required>
+              <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="c4Documentation">C4 Documentation</label>
+            <select id="c4Documentation" [(ngModel)]="project.c4Documentation" name="c4Documentation" required>
+              <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+            </select>
+          </div>
+        </div><br>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label for="salesHandover">Sales Handover</label>
+            <select id="salesHandover" [(ngModel)]="project.salesHandover" name="salesHandover" required>
+              <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="architectureHandover">Architecture Handover</label>
+            <select id="architectureHandover" [(ngModel)]="project.architectureHandover" name="architectureHandover" required>
+              <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+            </select>
+          </div>
+        </div><br>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label for="decodersRepository">Decoders Repository</label>
+            <select id="decodersRepository" [(ngModel)]="project.decodersRepository" name="decodersRepository" required>
+              <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="processAdoptionLatestVersion">Process Adoption Latest Version</label>
+            <select id="processAdoptionLatestVersion" [(ngModel)]="project.processAdoptionLatestVersion" name="processAdoptionLatestVersion" required>
+              <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+            </select>
+          </div>
+        </div><br>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projectKickoff">Project Kickoff</label>
+            <select id="projectKickoff" [(ngModel)]="project.projectKickoff" name="projectKickoff" required>
+              <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="projectSharedDocumentRepository">Project Shared Document Repository</label>
+            <select id="projectSharedDocumentRepository" [(ngModel)]="project.projectSharedDocumentRepository" name="projectSharedDocumentRepository" required>
+              <option *ngFor="let status of statusEnum | keyvalue" [ngValue]="status.value">{{status.key}}</option>
+            </select>
+          </div>
+        </div><br>
+  
+        <button type="submit" class="btn btn-primary">Create Project</button><br>
+      </form>
+      <div  *ngIf="showSuccessMessage"class=" text-center mx-auto success-message">
+        {{ successMessage }}
+      </div>
+  
+      
+      <button type="button" class="btn btn-secondary" (click)="goBack()">See all projects</button>
+    </div>
+  </div>
+  

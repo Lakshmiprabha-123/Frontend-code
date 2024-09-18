@@ -1,0 +1,32 @@
+nav {
+    background-color:#28282B;
+    color: white;
+    padding: 1em;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  li {
+    color: black;
+    margin: 0;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  .title{
+    color:white;
+    font-size: 20px;
+  }

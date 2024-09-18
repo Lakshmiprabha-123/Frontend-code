@@ -1,0 +1,43 @@
+.dashboard-container {
+    display: flex;
+    gap: 20px; /* Space between the components */
+  }
+  
+  .chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Allow components to grow equally */
+  }
+  .legend-box {
+    width: 150px; /* Width of the legend box */
+    margin-right: 20px; /* Space between legend and chart */
+    padding: 10px; /* Padding inside the legend box */
+    background-color: #f9f9f9; /* Light background color for the box */
+    border: 1px solid #ccc; /* Border to make the box visible */
+    border-radius: 8px;
+     /* Slight rounding of the box corners */
+  }
+  
+  .legend-box ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .legend-box li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  
+  .chart-box {
+    flex-grow: 1; /* Ensure the chart takes the remaining space */
+  }
+  

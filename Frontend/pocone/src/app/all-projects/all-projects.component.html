@@ -1,0 +1,60 @@
+
+<div class="anyClass">
+    <h2 style="text-align: center;">Project List</h2>
+    <table class="table table-striped custom-striped-table">
+       <thead>
+           <tr>
+            <th>Project Name</th>
+            <th>Project Lead</th>
+            <th>Tech Stack</th>
+            <th>Start Date</th>
+            <th>Deadline</th>
+            <th>Current status</th>
+            <th>Actions</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor = "let project of projects">
+             <td>{{project.name}}</td>
+             <td>{{project.lead}}</td>
+             <td>{{project.techStack}}</td>
+             <td>{{project.startdate}}</td>
+             <td>{{project.deadline}}</td>            
+             
+             <td>
+              <div
+                class="status-rectangle"
+                [ngClass]="{
+                  'ontrack': project.currentStatus === 'On Track',
+                  'slow': project.currentStatus === 'Slow',
+                  'risk': project.currentStatus === 'Risk',
+                  'deep-risk': project.currentStatus === 'Deep Risk',
+                  'not-yet':project.currentStatus==='Not Yet Started'
+                }">
+                {{ project.currentStatus }}
+              </div>
+            </td>
+               
+            <td>
+              <div class="button-grid">
+                <button (click)="addstatus(project.id!)" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="Add status">
+                  <i class="fas fa-plus"></i>
+                </button>
+                <button (click)="updateproject(project.id!)" class="btn btn-info"data-toggle="tooltip" data-placement="right" title="Update project">
+                  <i class="fas fa-pencil-alt"></i>
+                </button>
+                
+                <button (click)="projectdetails(project.id!)" class="btn btn-info" data-toggle="tooltip" data-placement="right" title="Project details">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button (click)="deleteProject(project.id)" class="btn btn-danger"data-toggle="tooltip" data-placement="right" title="Delete project!">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </td>
+            
+           </tr>
+       </tbody>
+    </table>
+    <button type="button" class="btn btn-secondary" (click)="goBack()">Back</button>
+</div>

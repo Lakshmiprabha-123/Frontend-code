@@ -1,0 +1,32 @@
+<div class="dashboard-container">
+  <div class="chart-container">
+    <!-- Flexbox container for the dropdowns -->
+    <div class="dropdown-container">
+      <div>
+        <label>Select Project:</label>
+        <select [(ngModel)]="selectedProjectId" (change)="fetchStatusHistory()">
+          <option *ngFor="let project of projects" [value]="project.id">{{ project.name }}</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Select Year:</label>
+        <select [(ngModel)]="selectedYear" (change)="fetchStatusHistory()">
+          <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+        </select>
+      </div>
+    </div>
+
+    <br>
+
+    <div style="display: block;">
+      <canvas baseChart
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [legend]="true"
+              [chartType]="lineChartType">
+      </canvas>
+    </div>
+  </div>
+</div>

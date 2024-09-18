@@ -1,0 +1,77 @@
+/* Assuming you are using a global CSS file or component-specific CSS file */
+.custom-striped-table thead th {
+    background-color: white; /* Blue color */
+    color: blue; /* White text for better contrast */
+  }
+  
+  .button-grid {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    align-items: center;
+    gap: 5px; /* Small spacing between buttons */
+  }
+  
+  .button-grid button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px; /* Adjust padding */
+    font-size: 14px; /* Font size */
+    width: 40px; /* Fixed width for buttons */
+    height: 40px; /* Fixed height for buttons */
+  }
+  
+  
+    .anyClass{
+      color:blue;
+    }
+    .status-rectangle {
+      display: inline-block;
+      padding: 15px 5px;
+      border-radius: 15px;
+      color: black; /* Text color inside the rectangle */
+      font-weight: bold; /* Make the text bold */
+      text-align: center; /* Center the text */
+      min-width: 100px; /* Minimum width to ensure a rectangle shape */
+      width: 130px; /* Set a fixed width */
+      height: 60px; /* Set a fixed height */
+      line-height: 30px; /* Vertically center the text */
+      box-sizing: border-box; /* Ensure padding is included in the width and height */
+  }
+    
+    .ontrack {
+      background-color: rgb(129, 219, 129);
+    }
+    
+    .slow {
+      background-color: rgb(238, 238, 132);
+    }
+    
+    .risk {
+      background-color: rgb(245, 131, 79);
+      color: black; /* Use black text for better contrast on yellow background */
+    }
+    
+    .deep-risk {
+      background-color: rgb(240, 107, 107);
+    }
+
+
+.not-yet{
+background-color: grey;
+}    
+    .btn-secondary{
+      background-color: blue;
+    }
+    :host {
+      display: block;
+      background-image: url('/assets/your-backgroundimg.jpg');
+      background-color: rgba(173, 216, 230, 0.8);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh; /* Ensure it covers the full viewport height */
+      padding: 10px;
+    }
+    
+    

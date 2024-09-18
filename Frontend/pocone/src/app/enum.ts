@@ -1,0 +1,6 @@
+export enum StatusEnum{
+    NOT_YET='NOT_YET',
+    IN_PROGRESS='IN_PROGRESS',
+    COMPLETED='COMPLETED',
+    NOT_NECESSARY='NOT_NECESSARY'
+}
